@@ -1,0 +1,30 @@
+.form-container {
+    width: 400px;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+#suggestion{
+    width: 380px;
+    height: 100px;
+    
+}
+div{
+    background-color: white;
+    
+
+}
+h2{
+    color: blue;
+}
+body{
+    background-color: aqua;
+}
+button{
+    background-color: blue;
+    color: white;
+    width: 60px;
+    height:30px;
+    border-radius: 5px;
+    border-style: none;
+}

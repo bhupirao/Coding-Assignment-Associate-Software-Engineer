@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Survey Form</title>
+    <link rel="stylesheet" href="/Survey_Form/style.css">
+
+</head>
+<body>
+    <div class="form-container">
+        <h2>Survey Form</h2>
+        <form id="survey-form" onsubmit="return validateForm()">
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" required><br><br>
+
+            <label for="last-name">Last Name:</label>
+            <input type text="text" id="last-name" required><br><br>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" required><br><br>
+
+            <label for="country">Country:</label>
+            <select id="country" required>
+                <option value="">Select a country</option>
+                <option value="canada">Canada</option>
+                <option value="india">India</option>
+                <option value="usa">USA</option>
+                <option value="uk">UK</option>
+                <!-- Add more countries as needed -->
+            </select><br><br>
+
+            <label>Gender:</label>
+            <label for="male">Male</label>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="female">Female</label>
+            <input type="radio" id="female" name="gender" value="female" required><br><br>
+
+            <label for="profession">Profession:</label>
+            <input type="text" id="profession" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required><br><br>
+
+            <label for="mobile">Mobile Number:</label>
+            <input type="tel" id="mobile" required><br><br>
+
+            <label>Is this first time you using our product or service ?</label>
+            <br>
+            <label for="yes">Yes</label>
+            <input type="radio" id="yes" name="option" value="yes" required>
+            <label for="no">No</label>
+            <input type="radio" id="no" name="option" value="no" required><br><br>
+
+            <label>Would you suggestion to your friends and colleague ?</label>
+            <br>
+            <label for="yes">Yes</label>
+            <input type="radio" id="yes" name="option3" value="yes" required>
+            <label for="no">No</label>
+            <input type="radio" id="no" name="option3" value="no" required><br><br>
+
+            <label>How satisfied are you with our company overall ?</label>
+            <br>
+            <label for="satisfied">Satisfied</label>
+            <input type="radio" id="satisfied" name="option2" value="satisfied" required>
+            <label for="undecided">Undecided</label>
+            <input type="radio" id="undecided" name="option2" value="undecided" required>
+            <label for="unsatisfied">Unsatisfied</label>
+            <input type="radio" id="unsatisfied" name="option2" value="unsatisfied" required><br><br>
+ 
+            <label for="suggestion">Do you have suggestion to improve our service ? </label>
+            <br>
+            <br>
+            <input type text="text" id="suggestion"><br><br> 
+
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+            <br>
+            <br>
+        </form>
+    </div>
+
+
+    <script src="/Survey_Form/script.js"></script>
+</body>
+</html>
