@@ -1,0 +1,129 @@
+
+Javascript
+
+A. Take a sentence as an input and reverse every word in that sentence. 
+a. Example - This is a sunny day > shiT si a ynnus yad. 
+B. Perform sorting of an array in descending order.
+
+Task A :-  Take a sentence as an input and reverse every word in that sentence. 
+            a. Example - This is a sunny day > shiT si a ynnus yad. 
+
+
+   function reverseWords(sentence) {
+   
+    // Split the sentence into words
+    const words = splitSentence(sentence);
+
+    // Reverse each word
+    const reversedWords = words.map(function(word) {
+
+        return reverseWord(word);
+
+    });
+
+    // Join the reversed words back into a sentence
+    const reversedSentence = joinWords(reversedWords);
+
+    return reversedSentence;
+
+}
+
+function splitSentence(sentence) {
+
+    let words = [];
+    let word = '';
+
+    for (let i = 0; i < sentence.length; i++) {
+
+        if (sentence[i] === ' ') {
+            if (word) {
+                words.push(word);
+            }
+            word = '';
+        } else {
+            word += sentence[i];
+        }
+
+    }
+
+    if (word) {
+        words.push(word);
+    }
+
+    return words;
+
+}
+
+function reverseWord(word) {
+
+    // Split the word into characters, reverse them, and join back
+    return reverseString(word);
+
+}
+
+function reverseString(str) {
+
+    let reversed = '';
+    for (let i = str.length - 1; i >= 0; i--) {
+        reversed += str[i];
+    }
+
+    return reversed;
+
+}
+
+function joinWords(words) {
+
+    let sentence = '';
+    for (let i = 0; i < words.length; i++) {
+        sentence += words[i];
+        if (i < words.length - 1) {
+            sentence += ' ';
+        }
+    }
+
+    return sentence;
+
+}
+
+const str = 'This is a sunny day';
+const reversedSentence = reverseWords(str);
+
+console.log(reversedSentence);
+ // Output: "sihT si a ynnus yad"
+
+
+
+X================================================================================X===========================================================================================X
+
+Task B :-  Perform sorting of an array in descending order.
+
+
+function sortDescending(arr) {
+
+    for (let i = 0; i < arr.length - 1; i++) {
+        for (let j = 0; j < arr.length - i - 1; j++) {
+            if (arr[j] < arr[j + 1]) {
+           
+                let temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+
+            }
+        }
+    }
+
+    return arr;
+
+}
+
+const inputArray = [4, 1, 8, 3, 5];
+const sortedArray = sortDescending(inputArray);
+
+console.log(sortedArray); 
+// Output: [8, 5, 4, 3, 1]
+
+
+X=============================================================================X==============================================================================================X
+
+
